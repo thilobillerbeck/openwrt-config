@@ -10,7 +10,7 @@
         profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs; };
 
         config = profiles.identifyProfile "asus_tuf-ax4200" // {
-          packages = [ "umdns" "luci" "luci-app-firewall" "luci-app-sqm" "sqm-scripts" "luci-proto-wireguard" "luci-app-wireguard" "pbr" "luci-app-pbr" ];
+          packages = [ "umdns" "luci" "luci-app-firewall" "luci-app-sqm" "sqm-scripts" "luci-proto-wireguard" "luci-app-wireguard" "pbr" "luci-app-pbr" "dnsmasq-full" ];
         };
       in
       openwrt-imagebuilder.lib.build config;
